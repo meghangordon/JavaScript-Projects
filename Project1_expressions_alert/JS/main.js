@@ -9,7 +9,10 @@ var C = "The Gordons", Dad = "Duane", Mom = "Amie", //This is variable C
 
 var D = "13 + 31";
 
+var Sent1 = ("This is the beginning of the string")
+var Sent2 = (" and this is the end of the string")
 
-document.write(D)
+document.write(Sent1 + Sent2)
 
-window.alert("Click me!")    
+window.alert("Click me!")   
+
