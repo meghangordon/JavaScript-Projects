@@ -1,0 +1,151 @@
+<!-- Requirments: 
+Home page section (heading tag, <p> tag, etc.).
+
+A section with pictures (<img> tags, etc.).
+
+Contact form (<form> tag, <input> tag, etc.).
+
+A section with a video(s) (<iframe> tag, src attribute, etc.).
+
+Footer (<footer> tag, etc.).
+
+A <nav> element that utilizes HTML bookmarks to allow the user to jump to various sections on the page.
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="./CSS/one_page_website.css">
+	</head>
+	<body>
+		
+	<!-- Navigation -->
+		<div class="wrap">
+			<div class="menu-container"></div>
+			<ul class="menu">
+					<a href="#home" id="link"><li>HOME</li></a>
+					<a href="#gallery"><li>GALLERY</li></a>
+					<a href="#videos"><li>VIDEOS</li></a>
+					<a href="#contact"><li>CONTACT</li></a>
+				</ul>
+		</div>
+	<!-- End Navigation -->
+	
+	<!-- Home Page -->
+		<div id = "home">
+			<div>
+				<div>
+					<h1> The Plants Page | All About Plants and Plant Care!</h1>
+						<h3><p> Take a look at some of our favorite plants - also take a peek at our timelapes of plant growth!</p></h3>
+					</div>
+			</div>
+		</div>
+	<!-- End Home Page -->
+	
+	<!-- Gallery -->
+	<hr>
+	<div id="gallery">
+		<div class="row">
+			<div class="column">
+			<img src="./Photos/1Succulents.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./Photos/2Troppical.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./Photos/3House.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+		</div>
+	<!-- The Modal/Lightbox -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<div class="numbertext">1 / 3</div>
+				<img src="./Photos/1Succulents.jpg" style="width:100%">
+			</div>
+			
+			<div class="mySlides">
+				<div class="numbertext">2 / 3</div>
+				<img src="./Photos/2Troppical.jpg" style="width:100%">
+			</div>
+			
+			<div class="mySlides">
+				<div class="numbertext">3 / 3</div>
+				<img src="./Photos/3House.jpg" style="width:100%">
+			</div>
+			
+			<!-- Next/previous controls -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		
+			<!-- Caption text -->
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<!-- Thumbnail image controls -->
+			<div class="column">
+				<img class="demo" src="./Photos/1Succulents.jpg" onclick="currentSlide(1)" alt="Multi-colored succulents">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./Photos/2Troppical.jpg" onclick="currentSlide(2)" alt="Tropical plants">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./Photos/3House.jpg" onclick="currentSlide(3)" alt="House plants - Aloe & Chinese Money Plant">
+			</div>
+		</div>
+		<script src="./JavaScript/onepage.js"></script>
+	</body><hr>	
+	<!-- End Gallery-->
+	
+	<!-- Videos Section-->
+		<div class="videos">
+			<div id="videos"></div>
+		<h2>Suculent Plant Growth Timelapse</h2><iframe width="360" height="215" src="https://www.youtube.com/embed/qGq1Bi8BUAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<h2>Monstera Plant Growth Timelapse</h2><iframe width="360" height="215" src="https://www.youtube.com/embed/or9nzGfGKzs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<h2>Chinese Money Plant Growth Timelapse<h2><iframe width="360" height="215" src="https://www.youtube.com/embed/9ZDVCJfDlpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<hr>
+			<!-- End Videos Section-->
+
+	<section id="contact">
+		<div class="container">
+			<div class="heading-padding">
+				<h1 class="heading-padding">Subscribe</h1>
+				<div class="subscribe">
+					<h2><span>Love our plant content?</span>
+						<br><h3>Sign up to recieve daily plant tips and tricks!</h3></br>
+					</h2>
+					<p class="rsvp-text">
+						Enter your information here to subscribe
+					</p>
+					<div class="form-rsvp">
+						<form action="" method="post">
+							<input class="rsvp" type="text" value="" placeholder="First Name">
+							<input class="rsvp" type="text" value="" placeholder="Last Name">
+							<input class="rsvp" type="text" value="" placeholder="Email Address">
+							<input class="rsvp" type="text" value="" placeholder="Phone Number">
+						</form>
+						<div class="form-spacer">
+							<label class="terms">Terms and Conditions</label>
+						</div>
+						<div class="submit">
+							<input type="submit" value="Submit">
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</section>
+	
+	<!-- Footer -->
+		<div id="footer">
+			www.plants.com &nbsp;|&nbsp; &copy; 2022
+		</div>
+	<!-- End Footer -->
+	
+	
