@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--head-->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"/>
+        <title>Meghan Gordon</title>
+        <link rel="stylesheet" href="./CSS/index.css">
+    </head>
+
+<!--body-->
+
+<body class="Background">
+
+        <!--navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+    <!--breaks between navbar and first heaading-->
+    <br>
+    <br>
+
+    <!--background video-->
+    <div id="Home">
+        <video autoplay muted loop id="Coding_Video">
+            <source src="./videos/Coding.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--video text-->
+    <div class="Video_Text">
+        <h1 class="white-text">Meghan Gordon's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>Being a woman on a team of all men, means that you are going to have a unique voice</q>
+                <br> - Erin Teague
+                <br>
+                <br> My name is Meghan. Welcome to my portfolio website! On it, I will tell you about my background and
+                experience.
+                <br>
+                <br> Thank you for stopping by and enjoy!
+            </p>
+        </strong>
+    </div>
+
+<!--SLIDESHOW SECTION-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!--slide 1-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/1.png" alt="Picture of Meghan Gordon">
+                    <div class="text">I am available to help you on your next project!</div>
+                </div>
+                <!--slide 2-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/2.png" alt="What Meghan is trained in!">
+                    <div class="text">I am a full stack junior developer<br>trained in: CSS, JS, and HTML.</div>
+                </div>
+                <!--slide 3-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/3.png" alt="Learning soon page!">
+                    <div class="text">Here is what I will be learning, these skills coming soon. Stay tuned!</div>
+                </div>
+                <!--slide 4-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/4.png" alt="Contact page">
+                    <div class="text">Contact me now to learn more!</div>
+                </div>
+                <!--previous/next buttons-->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!--slideshow dots-->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+
+<!--END SLIDESHOW SECTION-->
+
+    <!--about section-->
+    <div class="Row" id="About">
+        <!--Left column-->
+        <div class="Column_2">
+            <img src="./images/MG Portfolio Slideshow.png" alt="woman working on computer graphic">
+        </div>
+        <!--right column-->
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                I am learning and training to become a junior software developer. I am a cat mom of two, a dog mom of one, and also a plant mom(too many to count)!
+                <br>
+                <br>I will be a graduate of <a href="https://www.learncodinganywhere.com" target="_blank"> The the Tech 
+                    Academy</a>'s Software Developer Boot Camp, and trained and experiences in the following web and 
+                    programming languages: HTML, CSS, JavaScript, SQL, Python, and more! Coming soon, Oct. 2022!
+                <br>
+                <br> I will be a full-stack web and software developer and would love to work on future projects with you!
+                    <a href="#Contact"> Contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+<!--GITHUB SECTION-->
+    <div class="Row" id="GitHub">
+        <!--left column-->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can view my coding projects on my GitHub profile here:
+                <br>
+            <p class="center"><a href="https://github.com/meghangordon" target="_blank">Meghan Gordon GitHub</a></p>
+            
+        </div>
+        <!--right column-->
+        <div class="Column_2">
+            <a href="https://github.com/meghangordon" target="_blank"><img src="./images/github.png"
+            alt="GitHub Logo"></a>
+        </div>
+    </div>
+
+<!--CONTACT SECTION-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/xeqnyape" method="POST" class="form-container">
+          
+            <h1>Contact</h1>
+            <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+
+            <label for="phone" ><b>Phone</b></label>
+                <input type="text" placeholder="Type your phone number here" name="phone">
+
+            <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Type your email address here" name="email" required>
+
+            <label for="message"><b>Message</b></label>
+                <input type="text" placeholder="Type your message here" name="message">
+
+            <button type="submit" class="btn">SUBMIT</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+    
+<!--FOOTER SECTION-->
+        <footer>
+            <p class="center"> Meghan Gordon Productions., </p>
+            <p class="center">760.987.1327</p>
+            <p class="center">buffy10626@gmail.com</p>
+        </footer>
+        <script src="./JS/index.js"></script>
+
+    </body>
+
+</html>
+
+

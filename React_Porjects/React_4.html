@@ -1,0 +1,125 @@
+<!--End of Course Challenges-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link type="text/css" href="./CSS/react4.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!--VW Challenge-->
+        <h1 style= "font-size:10vw;">Hello world!</h1>
+        <p style="font-size:5vw;">Check out this VW challenge</p>
+
+        <!--Fade Challenge-->
+        <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            });
+        });
+        </script>
+
+        <button>Click to fade in/out boxes</button><br>
+        <br>
+        <div id="div1" style="width:80px;height:80px;background-color:pink"></div>
+        <br>
+        <div id="div2" style="width:80px;height:80px;background-color:teal"></div>
+        <br>
+        <div id="div3" style="width:80px;height:80px;background-color:paleturquoise"></div>
+        <br>
+
+        </script>
+
+        <!--Form Challenge-->
+        <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if(x == "") {
+                alert("Name fields must be filled out");
+                return false;
+            }
+        }
+        </script>
+        <form name = "myForm" action="/action_page.php" 
+        onsubmit="return validateForm()" method="post">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="First Name..."><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Last Name..."><br>
+            <input type="submit" value="Submit">
+        </form>
+    
+
+        <!--Pop Contact Form-->
+        <button class="open-button" onclick="openForm()">Open Form</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+
+        <!--Animation Challenge-->
+        <style>
+        h3 {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            position: relative;
+            animation: mymove 3s infinite;
+        }
+
+        @keyframes mymove {
+            from {top: 0px;}
+            to {top: 15px;}
+        }
+        </style>
+        <h3> The @keyframes Rule</h3>
+
+        <!--Zoom in and out Challeng-->
+    
+        <style>
+        @keyframes zoominoutsinglefeatured {
+            0% {
+                transform: (1, 1);
+            }
+            50% {
+                transform: (1.5, 1.5);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+            }
+        
+        img {
+            animation:zoominoutsinglefeatured 10s forwards;
+        }    
+        </style>
+
+        <img src="./funny-cat-gifs.gif">
+
+
+    </body>
+</html>
