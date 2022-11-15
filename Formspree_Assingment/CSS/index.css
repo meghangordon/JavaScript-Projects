@@ -8,7 +8,7 @@ body {
     opacity: 1;
     transition: 3s;
     letter-spacing: 3s opacity;
-    font-family: monospace;
+    font-family: sans-serif;
     font-size: 1.5vw;
     overflow-x: hidden;
     user-select: none;
@@ -20,8 +20,7 @@ body.fade-out {
 
 /*heading 1 elements */
 h1 {
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     text-align: center;
     margin-top:  5%;
     color: aliceblue;
@@ -41,7 +40,7 @@ h1:hover {
 
 /* Paragraph elements */
 p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     text-align: justify;
     letter-spacing: .1vw;
     font-size: 2.5vw;
@@ -72,11 +71,13 @@ a {
     color: purple;
     cursor: pointer;
     text-decoration: underline;
+    font-family: sans-serif;
 }
 
 /* Quotation elements */
 q {
     font-style: italic;
+    font-family: sans-serif
 }
 
 /* Image elements */
@@ -104,7 +105,8 @@ img:hover {
 /* Styling for footer element */
 footer {
     padding: 2%;
-    background-color: rgba(245, 134, 142, 0.8)
+    background-color: rgba(245, 134, 142, 0.8);
+    font-family: sans-serif;
 }
 
 /***** END OF GENERAL STYLING *****/
@@ -134,7 +136,7 @@ footer {
     color: white;
     padding: .75vw 1vw;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-size: 1.5vw;
     text-align: center;
     position: relative;
@@ -274,7 +276,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-family: monospace;
+    font-family: sans-serif;
     letter-spacing: .1vw;
     font-size: 1.5vw;
     background-color: rgba(0, 0, 0, .75);
