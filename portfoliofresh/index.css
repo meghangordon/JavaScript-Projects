@@ -1,0 +1,49 @@
+.Navbar {
+    overflow: hidden;
+    background-color: #8D9692;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 3s;
+    animation: moveNav 3s;
+    color: #C4A286;
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+    margin-top: 0px;
+    float: left;
+}
+
+.Navbar li {
+    display: inline;
+    position: relative;
+    float: left;
+    padding: 0 15px;
+}
+
+.Navbar li::after {
+    position: absolute;
+    width: 2px;
+    right: 0;
+    content: '';
+    height: 100%;
+    background-color: #C4A286;
+}
+
+.Navbar li:last-child::after {
+    width: 0;
+}
+
+.Navbar a {
+    float: left;
+    display: block;
+    color: #C4A286;
+    padding: .75vw 1vw;
+    text-decoration: none;
+    font-family: Vanity-Light;
+    font-size: 1.5vw;
+    text-align: center;
+    position: relative;
+    
+}

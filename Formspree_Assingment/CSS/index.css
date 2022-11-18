@@ -1,14 +1,21 @@
 /*  general styling */
 html {
     scroll-behavior: smooth;
+    background-color: #ebe6df;
+    @font-face {
+        font-family: Vanity-Light;
+        src: url(font/Vanity-Light.ttf);
+    }
+    
 }
+    
 /*  Body */
 body {
     margin: 0%;
     opacity: 1;
     transition: 3s;
     letter-spacing: 3s opacity;
-    font-family: sans-serif;
+    font-family: Vanity-Light;
     font-size: 1.5vw;
     overflow-x: hidden;
     user-select: none;
@@ -18,29 +25,9 @@ body.fade-out {
     opacity: .1;
 }
 
-/*heading 1 elements */
-h1 {
-    font-family: sans-serif;
-    text-align: center;
-    margin-top:  5%;
-    color: aliceblue;
-}
-
-h1:hover {
-    filter: grayscale(3%);
-    transform: scale(1.1);
-    transition: transform 1s;
-}
-
-/* Styling for portfolio title text */
-.white-text {
-    color: #fff;
-    padding-top: 10vh;
-}
-
 /* Paragraph elements */
 p {
-    font-family: sans-serif;
+    font-family: Vanity-Light;
     text-align: justify;
     letter-spacing: .1vw;
     font-size: 2.5vw;
@@ -49,50 +36,41 @@ p {
     color: white;
 }
 
-/* Paragraph element hover effect */
-p:hover {
-    transition: transform 1s;
-    transform: scale(1.01);
-}
 
 /* Center class - this applies to all elements with the class "center" */
 .center {
     text-align: center;
 }
 
-/* Center class hover effect - This only affects the quote, github link, and footer */
-.center:hover {
-    transition: transform 2s;
-    transform: scale(1.1);
-}
 
 /* Anchor elements */
 a {
-    color: purple;
+    color: #0f4444;
     cursor: pointer;
     text-decoration: underline;
-    font-family: sans-serif;
+    font-family: Vanity-Light;
 }
 
 /* Quotation elements */
+div.qoute {
+    color: #6e7e74;
+    font-size: medium;
+    text-align:center;
+    height: 300px;
+    width: 550px;
+    font-display: block;
+    font-family: Vanity-Light;
+    margin-top: 50px;
+    line-height: 30px;
+}
+
 q {
     font-style: italic;
-    font-family: sans-serif
-}
-
-/* Image elements */
-img {
-    filter: grayscale(75%);
-    border-radius: 8px;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: auto auto auto auto;
-}
-
-/* Image element hover effects */
-img:hover {
-    filter: grayscale(5%);
+    color: #6e7e74;
+    font-family: Vanity-Light;
+    font-size: xx-large;
+    
+    
 }
 
 @media screen and (max-width: 576px) {
@@ -104,9 +82,10 @@ img:hover {
 
 /* Styling for footer element */
 footer {
-    padding: 2%;
-    background-color: rgba(245, 134, 142, 0.8);
-    font-family: sans-serif;
+    padding: 1%;
+    background-color: #8D9692;
+    font-family: Vanity-Light;
+    margin: 0;
 }
 
 /***** END OF GENERAL STYLING *****/
@@ -114,29 +93,56 @@ footer {
 
 .Navbar {
     overflow: hidden;
-    background-color: teal;
+    background-color: #8D9692;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
     -webkit-animation: moveNav 3s;
     animation: moveNav 3s;
+    color: #C4A286;
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+    margin-top: 0px;
+    float: left;
 }
 
-/* moveNav animation effect for moving the nav bar in from the left of the screen */
+.Navbar li {
+    display: inline;
+    position: relative;
+    float: left;
+    padding: 0 15px;
+}
+
+.Navbar li::after {
+    position: absolute;
+    width: 2px;
+    right: 0;
+    content: '';
+    height: 100%;
+    background-color: #C4A286;
+}
+
+.Navbar li:last-child::after {
+    width: 0;
+}
+
+
+/* moveNav animation effect for moving the nav bar in from the left of the screen 
 @keyframes moveNav {
     from { left: -100vw; }
     to { left: 0vw;}
 }
-
+*/
 /* Navbar links */
 .Navbar a{
     float: left;
     display: block;
-    color: white;
+    color: #C4A286;
     padding: .75vw 1vw;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: Vanity-Light;
     font-size: 1.5vw;
     text-align: center;
     position: relative;
@@ -162,174 +168,59 @@ footer {
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    background-color:teal;
     color: rgb(10, 70, 75);
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s ease-in;
+    transition: 0.1s ease-in;
 }
 
 /* Navbar home button */
 .Navbar a.active {
-    background-color: rgb(13, 88, 82);
+    background-color: #8d9692;
 }
 
 /***** END OF NAVBAR STYLING *****/
-/***** VIDEO STYLING *****/
 
-/* Formatting for background video */
-#Coding_Video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    z-index: -1;
-}
-/* screens that are 576 and smaller will not display the video*/
-@media screen and (max-width: 576px) {
-    #Coding_Video {
-        display: none;
-    }
-}
-
-/* Texts over the video */ 
-.Video_Text {
-    background: rgba(245, 134, 141, 0.082);
-    color: white;
-    width: 100%;
-    height: 100vh;
-    padding: 20px;
-    position: relative;
-    -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75s;
+/* Meghan Gordon Headshot & about info section */ 
+.about_info {
+    padding: 80px;
     text-align: center;
-}
+    margin: 10px;
 
-/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
-@keyframes moveVideoText{
-    from {
-        top:-100vw;
-    }
-    to {
-        top: 0vw;
-    }
-}
-/***** END OF VIDEO STYLING *****/
-
-/***** SLIDESHOW STYLING *******/
-#Slideshow_Background {
-    background: rgba(255, 255, 255, 0.35);
-}
-
-.mySlides {
-    display: none;
-}
-
-#Slideshow_Container {
-    width: 39.5vw;
-    height: auto;
-    padding-top: 4%;
-    position: relative;
-    margin: auto;
-}
-
-#Slideshow_Container a {
-    text-decoration: none;
-}
-
-.Slideshow_Images {
-    vertical-align: middle;
-    height: auto;
-    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
-    width: 100%;
-}
-
-/*Next and preivous slides*/
-.Previous, .Next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 2vw;
-    color: darkgrey;
-    font-weight: bold;
-    font-size: 1.5vw;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    transition: 0.6s ease;
-}
-
-.Next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.Previous:hover, .Next:hover {
-    background-color: rgba(0, 0, 0, .8);
-    color: white;
-}
-
-.text {
-    color: white;
-    padding: 1vw;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-family: sans-serif;
-    letter-spacing: .1vw;
-    font-size: 1.5vw;
-    background-color: rgba(0, 0, 0, .75);
-    font-weight: bold;
-    border-radius: 0px 0px 7px 7px;
-}
-
-.dot {
-    cursor: pointer;
-    height: 1vw;
-    width: 1vw;
-    margin: .25vw;
-    background-color: white;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    z-index: 1;
-}
-
-.active, .dot:hover {
-    background-color: black;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4;}
-    to {opacity: 1;}
-}
-
-@keyframes fade {
-    from {opacity: .4;}
-    to {opacity: 1;}
 }
 
 /***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
 * {
     box-sizing: border-box;
+    font-family: Vaninty-Light;
 }
 
 .Column_1 {
-    float: left;
+    float: right;
     width: 50%;
-    padding: 1.6;
-    height: 450px;
-    background-color:lightcoral;
-    font-size: small;
+    padding: 20px;
+    border-radius: 50px;
+    height: 300px;
+    width: 500px;
+    border-radius: 50px;
+    font-family: Vanity-Light;
+    line-height: 50px;
+    margin-right: 50px;
 }
+
+.about_box {
+    border-radius: 25px;
+    background-color: #c0bca9;
+    padding: 20px;
+    width: 550px;
+    height: 350px;
+    font-display: block;
+    line-height: 50px;
+    font-family: Vanity-Light;
+    font-size: xx-large;
+    margin-top: -25%;
+}
+
 
 @media screen and (max-width: 576px) {
     .Column_1 {
@@ -341,18 +232,131 @@ footer {
 .Column_2 {
     float: left;
     width: 50%;
-    padding: 1.6%;
-    height: 450px;
-    background-color: pink;
-    font-size: xx-small;
+    padding: 0%;
+    background-color: #ebe6df;
+    color: #0f4444;
+    font-family: Vanity-Light;
 }
 
+.Column_3 {
+    float: left;
+    width: 40%;
+    padding: 20px;
+    border-radius: 50px;
+    height: 300px;
+    width: 500px;
+    border-radius: 50px;
+    font-family: Vanity-Light;
+    line-height: 45px;
+    margin-left: 50px;
+}
+
+.about_box2 {
+    margin-top: 1%;
+    border-radius: 25px;
+    background-color: #c0bca9;
+    padding: 20px;
+    width: 900px;
+    height: 400px;
+    font-display: block;
+    line-height: 50px;
+    font-family: Vanity-Light;
+    font-size: xx-large;
+    margin: 50px;
+}
+
+/* spacing after 'about me' section*/
 .Row:after {
     content: "";
     display: table;
     clear: both;
 }
 
+ .Column_4{
+    float: right;
+    width: 35%;
+    padding: 20px;
+    border-radius: 50px;
+    border-radius: 50px;
+    font-family: Vanity-Light;
+    line-height: 50px;
+
+}
+
+.Column_5 {
+    float: right;
+    width: 50%;
+    margin: -50px;
+    margin-top: 200px;
+}
+
+.Column_6 {
+    float: left;
+    width: 50%;
+    margin: 100px;
+    border-radius: 25px;
+    background-color: #6e7e74;
+    padding: 30px;
+    width: 550px;
+    height: 500px;
+    font-display: block;
+    line-height: 50px;
+    font-family: Vanity-Light;
+    font-size: xx-large;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    margin-top: auto;
+}
+
+.project-card {
+    width: 400px;
+    height: 400px;
+    box-shadow: 5px 5px 20px #8d9692;
+    border-radius: 30px;
+    margin: 30px;
+    background-color: #8d9692;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+img.project-image {
+    align-items: center;
+}
+
+.project-image {
+    margin-top: 0px;
+    height: 200px;
+    width: 200px;
+}
+.sub-section-alternative {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    text-align: center;
+    color: #0f4444;
+}
+
+.sub-section-alternative::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.subtext {
+    font-size: 15px;
+    font-weight: 300;
+
+}
 /***** END OF TABLE STYLING *****/
 
 /***** CONTACT FORM STYLING *****/
@@ -360,13 +364,15 @@ footer {
     position: fixed;
     bottom: 1.75vw;
     right: 1.75vw;
-    width: 25vw;
-    background-color: white;
-    color: black;
-    border: solid black;
+    width: 20vw;
+    height: 8vw;
+    background-color: #0f4444;
+    color:#C4A286;
+    border: solid #C4A286;
     cursor: pointer;
     -webkit-animation: movePopup 5s;
     animation: movePopup 5s;
+    
 }
 
 @keyframes movePopup {
@@ -403,12 +409,12 @@ footer {
     padding: .93vw;
     margin: .6vw 0 .6vw 0;
     border: none;
-    background: gainsboro;
+    background: whitesmoke;
     font-size: 1vw;
 }
 
 button {
-    font-family: monospace;
+    font-family: Vanity-Light;
     letter-spacing: .3vw;
     font-size: 1.5vw;
     font-weight: bold;
@@ -420,31 +426,31 @@ button {
 
 button:hover, .form-container .btn:hover {
     color: white;
-    background-color: teal;
+    background-color: #C4A286;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
-    border-color: black;
+    border-color: #0f4444;
 }
 
 .form-container .btn {
-    background-color: teal;
-    color: black;
-    border-color: black;
+    background-color: #6e7e74;
+    color: #C4A286;
+    border-color: #0f4444;
     margin-bottom: 1vh;
 }
 
 .form-container .cancel {
-    background-color: teal;
-    color: white;
-    border-color: pink;
+    background-color: #6e7e74;
+    color: #C4A286;
+    border-color: #0f4444;
 }
 
 .form-container .cancel:hover {
     color: white;
-    background-color: pink;
+    background-color: #C4A286;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
-    border-color: black;
+    border-color: #0f4444;
 }
 
 
@@ -458,18 +464,18 @@ input[type=text] {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Vanity-Light;
 }
 
 /* Hover effects for input boxes */
 input[type=text]:hover {
-    box-shadow: 0 0 5px #10606e inset;
+    box-shadow: 0 0 5px #0f4444 inset;
 }
 
 /* Submit button */
 input[type=submit] {
-    background-color: rgb(71, 126, 107);
-    color: rgb(0, 0, 0);
+    background-color: ;
+    color: #C4A286;
     font-weight: bold;
     padding: 12px 20px;
     border: none;
@@ -478,7 +484,7 @@ input[type=submit] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Vanity-Light;
 }
 
 /* Hover effect for submit button */
@@ -492,9 +498,9 @@ input[type=submit]:hover {
 /* Form element */
 form { 
     border-radius: 5px;
-    background-color: lightcoral;
+    background-color: #C4A286;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Vanity-Light;
 }
 
 @media screen and (max-width: 527px) {
@@ -582,6 +588,24 @@ form {
     .Column_2 {
         height: 550px;
     }
+    
+    .Column_3 { 
+        height: 550px;
+    }
+    
+    .Column_4 {
+        height: 550px;
+    }
+
+    .Column_5 {
+        height: 550px;
+    }
+
+    .Column_6 {
+        height: 550px;
+    }
+
+
 }
 
 @media screen and (min-width: 2000px) {
@@ -589,3 +613,5 @@ form {
         margin-top: 0;
     }
 }
+
+

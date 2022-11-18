@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Meghan Gordon Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/39de77d4d8.js" crossorigin="anonymous"></script>
+    <!--navbar-->
+    <ul class="Navbar">
+        <li><a class="active" href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#GitHub">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+</head>
+
+<!--body-->
+
+<body class="Background"></body>
+<!--breaks between navbar and first heaading-->
+<br>
+<br>
+<!--about section, headshot, adnd qoute. -->
+<div class="about_info">
+    <!--about section-->
+    <div class="Row" id="About">
+        <p style="background-image: url('./images/flowergraphic.png');"></p>
+        <!--Left column-->
+        <div class="Column_2">
+            <br><br>
+            <h1>Meghan</h1>
+            <img id="megimg" src="./images/MeghanHeadshot.jpg" width="300" height="300"
+                alt="headshot photo of Meghan. ">
+            <h1>Gordon</h1>
+        </div>
+
+
+        <!--right column-->
+        <div class="Column_1">
+            <q>Being a woman on a team of all men, means <br>
+                that you are going to have a unique voice</q>
+            <br>- Erin Teague
+            <p id="about_box">I am a junior web and software developer based in Vancouver, WA.
+                A recent graduate of The Tech Academy specializing inPython.
+                I love cats, plants, and problem solving.</p>
+            <p class="center">
+
+            </p>
+
+        </div>
+    </div>
+
+    </strong>
+</div>
+
+<!--overview of meghan -->
+<div class="Row" id="About">
+    <!--Left column-->
+    <div class="Column_4">
+        <img src="./images/Meghan Graphic.png" alt="woman working on computer graphic">
+    </div>
+    <!--right column-->
+    <div class="Column_3" id="about_box2">
+        <h3>about me</h3>
+        <p>
+            a driven perfectionist with a passion for solving puzzles. This perfectionist found a way to apply this
+            skill set to her
+            career in software development. I am a quick learner and also eager to learn new concepts and ideas. Easily
+            adaptable to
+            new environments and situations. Whatever ideas get presented before me will be made to come to life at your
+            request.
+        </p>
+    </div>
+</div>
+
+<!--projects section-->
+<div class="projects">
+    <h1>projects</h1>
+
+    <div class="row" style="width: 18rem;">
+        <img class="card-img-top" src="./images/plantprojecticon.png" alt="plantproject">
+        <div class="card-body">
+            <h5 class="card-title">plant library application</h5>
+            <p class="card-text">track your plants and plant care needs</p>
+            <a href="https://github.com/meghangordon/Live-Project" class="btn btn-primary">view now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="./images/plantprojecticon.png" alt="plantproject">
+        <div class="card-body">
+            <h5 class="card-title">plant library application</h5>
+            <p class="card-text">track your plants and plant care needs</p>
+            <a href="https://github.com/meghangordon/Live-Project" class="btn btn-primary">view now</a>
+        </div>
+    </div>
+
+    <a href="https://github.com/meghangordon/Live-Project" target="_blank">
+        plant library application - track your plants and plant care needs.<img src="./images/plantprojecticon.png"
+            align="left" target="_blank" width="150" height="150"></a>
+    <br><br>
+    <a href="https://github.com/meghangordon/Python-Projects/tree/main/FileTransferAssignment" target="_blank"><img
+            src='./images/filetransfericon.png' width="150" height="150"></a>
+    <a href="https://github.com/meghangordon/DjangoProject/tree/mySecondBranch/Django_Checkbook_Project target="
+        target="_blank"><img src="./images/plantprojecticon.png" width="150" height="150"></a>
+    <a href="https://github.com/meghangordon/HTML-and-CSS-Projects/tree/mySecondBranch/bootstrap4_project"
+        target="_blank"><img src="./images/cinemasprojecticon.png" width="150" height="150"></a>
+    <a href="https://github.com/meghangordon/Live-Project" target="_blank"><img src="./images/plantprojecticon.png"
+            width="150" height="150"></a>
+
+
+
+</div>
+
+
+<!--CONTACT SECTION-->
+<div id="Contact">
+    <button onclick="openForm()" class="Pop_Up_Button">contact</button>
+    <div class="form-popup" id="myForm">
+        <form action="https://formspree.io/f/xeqnyape" method="POST" class="form-container">
+
+            <h1>Contact</h1>
+            <label for="name"><b>name</b></label>
+            <input type="text" placeholder="Type your name here" name="name" required>
+
+            <label for="phone"><b>phone</b></label>
+            <input type="text" placeholder="Type your phone number here" name="phone">
+
+            <label for="email"><b>email</b></label>
+            <input type="text" placeholder="Type your email address here" name="email" required>
+
+            <label for="message"><b>message</b></label>
+            <input type="text" placeholder="Type your message here" name="message">
+
+            <button type="submit" class="btn">submit</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">close</button>
+        </form>
+    </div>
+</div>
+
+<!--FOOTER SECTION-->
+<footer>
+    <p class="center"> Meghan Gordon | 760.987.1327 | meghan.gordon3@gmail.com </p>
+
+    <a href="https://www.linkedin.com/in/meghangordon3/" target="_blank"><i class="fa-brands fa-linkedin">
+            linkedin</i></a>
+    <br> <br>
+    <a href="https://github.com/meghangordon" target="_blank"><i class="fa-brands fa-square-github"> github</i></a>
+    <br> <br>
+    <a href="https://docs.google.com/document/d/e/2PACX-1vSMzq89Um3ykv_U0Cjt40Fs3cHZ08Znt-3uvVpVv7ajE2UlG52XFcwpykvwIY8hbnzYvAcE7WxB2tbF/pub"
+        target="_blank"><i class="fa-solid fa-file"> resume</i></a></p>
+</footer>
+<script src="./JS/index.js"></script>
+
+
+</body>
+
+</html>
